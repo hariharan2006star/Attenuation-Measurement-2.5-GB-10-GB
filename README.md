@@ -1,25 +1,18 @@
-# Attenuation Measurement 2.5 GB & 10 GB
 # Attenuation-Limited Fiber Length
-
 ## Objective
 - Calculate the attenuation-limited fiber length based on the power budget equation.  
 - Simulate the resulting system and verify that it meets performance objectives.
-
 ---
-
 ## Theory
 The **power budget equation** states that the power budget in a transmission system must equal the sum of all power losses plus the power margin.  
-
 The power budget is the difference between the transmitter output power and the receiver sensitivity in dBm:
 
+
 <img width="994" height="468" alt="image" src="https://github.com/user-attachments/assets/28074fe1-e571-4356-bf4c-29cf212c8173" />
-
 In this exercise, all parameters are given except the fiber length, which must be determined.  
-
 The **receiver sensitivity** is defined as the minimum power required to achieve a BER of <img width="54" height="38" alt="image" src="https://github.com/user-attachments/assets/56f53e67-161a-4d53-ba6e-e31a3725ea43" />, corresponding to a Q factor of 6.  
 - Receiver sensitivity depends on the bit rate.  
 - Fiber attenuation depends on the operating wavelength.  
-
 ---
 
 ## Pre-lab Calculations
@@ -35,7 +28,7 @@ Using the power budget equation and the parameters below, determine the attenuat
 - **Additional known losses:** 0 dB  
 - **Power margin:** 6 dB  
 
----
+
 
 ## Layout
 - The system has been created using **OptiSystem** and exported as an **OptiPerformer** file.  
@@ -45,10 +38,8 @@ Using the power budget equation and the parameters below, determine the attenuat
 - Adjust parameters according to the table above.  
 - Dispersion and nonlinear effects in the fiber are disabled.  
 - To set the receiver sensitivity to -30 dBm for 2.5 Gb/s, set the **thermal noise parameter** in the receiver to **8.97e-24 W/Hz**.  
-- Visualizer components are included to obtain necessary simulation data.  
-
----
-
+- Visualizer components are included to obtain necessary simulation data.
+  
 ## Simulation
 1. Run the simulation and record:
    - **Optical power levels (dBm):**
@@ -60,8 +51,6 @@ Using the power budget equation and the parameters below, determine the attenuat
      - Eye diagram  
 
 2. Set the fiber length to **125% of the calculated pre-lab value** and repeat the simulation and data recording.  
-
----
 
 ## Analysis and Report
 Compare simulation results with pre-lab calculations and record observations.  
@@ -80,5 +69,22 @@ Your report should contain:
   | Fiber Length (km) | Received Power (dBm) | Q Factor | BER |
   |-------------------|-----------------------|----------|-----|
   
+- **Written Summary** of observations and explanations of differences.
 
-- **Written Summary** of observations and explanations of differences.  
+  
+  ## Calculation
+  <img width="902" height="1317" alt="image" src="https://github.com/user-attachments/assets/cdd241a3-6574-4d51-b292-d6bf53f70fab" />
+
+  ## Output
+<img width="1918" height="1078" alt="Screenshot 2026-05-13 185513" src="https://github.com/user-attachments/assets/5b5acc24-90a1-46c7-9364-e1c0f748c594" />
+
+<img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/64877596-3169-4fda-a654-41f00788861c" />
+
+
+<img width="1600" height="1082" alt="image" src="https://github.com/user-attachments/assets/008197c4-2d68-41d8-a713-cc47dbdd87be" />
+
+
+
+ ## Result
+The calculated attenuation limited fiber length satisfied the required BER and Q factor in simulation.
+Increasing the fiber length to 125% reduced received power and degraded system performance.
